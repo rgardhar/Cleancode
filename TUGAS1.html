@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Code JavaDocs</title>
+    <style>
+        .code-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="code-box">
+        <h1 align="center">PERHITUNGAN BALOK</h1>
+        <pre>
+            <code>
+                /**
+                * Kelas untuk menghitung volume dan luas permukaan balok.
+                */
+                public class Balok {
+           
+                    private double panjang;
+                    private double lebar;
+                    private double tinggi;
+                
+                    /**
+                     * @param panjang Panjang dari balok
+                     * @param lebar   Lebar dari balok
+                     * @param tinggi  Tinggi dari balok
+                     */
+                    public Balok(double panjang, double lebar, double tinggi) {
+                        this.panjang = panjang;
+                        this.lebar = lebar;
+                        this.tinggi = tinggi;
+                    }
+                
+                    /**
+                     * Menghitung volume dari balok.
+                     * Volume balok dihitung dengan rumus: panjang * lebar * tinggi
+                     * @return Volume balok dalam satuan yang sama dengan panjang, lebar, dan tinggi.
+                     */
+                    public double hitungVolume() {
+                        return panjang * lebar * tinggi;
+                    }
+     
+                    /**
+                     * Menghitung luas permukaan dari balok.
+                     * Luas permukaan balok dihitung dengan rumus: 2 * (panjang * lebar + panjang * tinggi + lebar * tinggi) 
+                     * @return Luas permukaan balok dalam satuan yang sama dengan panjang, lebar, dan tinggi.
+                     */
+                     public double hitungLuasPermukaan() {
+                         return 2 * (panjang * lebar + panjang * tinggi + lebar * tinggi);
+                     }
+     
+                    /**
+                     * Menampilkan informasi mengenai volume, dan luas permukaan balok.
+                     */
+                    public void tampilkanInformasi() {
+                        System.out.println("Volume: " + hitungVolume() + " satuan^3");
+                        System.out.println("Luas Permukaan: " + hitungLuasPermukaan() + " satuan^2");
+                    }
+                }
+            </code>
+        </pre>
+    </div>
+</body>
+</html>
